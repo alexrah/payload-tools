@@ -3,7 +3,6 @@
   "version": "3.0.0",
   "description": "A collection of tools for Payload CMS v3",
   "type": "module",
-  "private": "false",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
@@ -56,6 +55,7 @@
     }
   },
   "publishConfig": {
+    "access": "public",
     "exports": {
       "./utils": {
         "import": "./dist/utils/index.js",
