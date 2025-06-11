@@ -1,0 +1,67 @@
+{
+  "name": "@alexrah/payload-tools",
+  "version": "3.0.0",
+  "description": "A collection of tools for Payload CMS v3",
+  "type": "module",
+  "private": "false",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf -g {dist/**/*,*.tsbuildinfo}",
+    "prepublishOnly": "pnpm clean && pnpm build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "payloadcms",
+    "cms",
+    "typescript",
+    "next.js",
+    "react",
+    "content management",
+    "node",
+    "javascript"
+  ],
+  "author": "alessandro stoppato",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@payloadcms/eslint-config": "^3.28.0",
+    "@payloadcms/eslint-plugin": "^3.28.0",
+    "eslint": "^9.24.0",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "5.8.3"
+  },
+  "peerDependencies": {
+    "@payloadcms/eslint-config": "^3.28.0",
+    "@payloadcms/eslint-plugin": "^3.28.0",
+    "eslint": "^9.24.0",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexrah/payload-tools.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./utils": {
+      "import": "./src/utils/index.ts",
+      "types": "./src/utils/index.ts",
+      "default": "./src/utils/index.ts"
+    }
+  },
+  "publishConfig": {
+    "exports": {
+      "./utils": {
+        "import": "./dist/utils/index.js",
+        "types": "./dist/utils/index.d.ts",
+        "default": "./dist/utils/index.js"
+      }
+    }
+  }
+}
