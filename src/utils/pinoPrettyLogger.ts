@@ -4,7 +4,7 @@ import { pino } from 'pino'
 import { build } from 'pino-pretty'
 
 /**
- * This function is required to expose pino's level in config,
+ * This function is required to expose pino's minimum level in config,
  * allowing to set it using environment variable and change it at runtime
  * simply by reloading pm2
  * */
