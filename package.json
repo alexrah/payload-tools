@@ -1,6 +1,6 @@
 {
   "name": "@alexrah/payload-tools",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A collection of tools for Payload CMS v3",
   "type": "module",
   "scripts": {
